@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chessverse Login</title>
+  <link rel="icon" href="assets/styles/logo.jpg">
+  <link rel="stylesheet" href="assets/styles/loginstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="assets/styles/illustration.png" alt="illustration" class="illustration" />
+                <h1 class="opacity">LOGIN</h1>
+                <form action="index.html" method="GET">
+                    <input  required type="text" placeholder="USERNAME" />
+                    <input required type="password" placeholder="PASSWORD" />
+                    <button type="submit" class="opacity">PLAY</button>
+                </form>
+                <div class="register-forget opacity">
+                    <a button class="btn">REGISTER</button></a>
+                    <a button class="bton">FORGOT PASSWORD</button></a>
+                </div>
+                <script>
+                    // Add event listener to login button
+                    document.querySelector('.btn').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        // Redirect to chess board page inside the login folder
+                        window.location.href = 'signinindex.html';
+                    });
+                </script>
+                <script>
+                    // Add event listener to login button
+                    document.querySelector('.bton').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        // Redirect to chess board page inside the login folder
+                        window.location.href = 'forgot_password.html';
+                    });
+                </script>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+
+</body>
+<!-- partial -->
+
+</body>
+</html>

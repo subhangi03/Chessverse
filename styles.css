@@ -1,0 +1,106 @@
+:root {
+    --background: #1a1a2e;
+    --text-color: #ffffff;
+    --primary-color: #491a05;
+    --button-hover-color: #602606;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background) url('assets/styles/idbg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.subscription-box {
+    background: rgba(26, 26, 46, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #bbbbbb;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.price small {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #bbbbbb;
+}
+
+.benefits {
+    list-style: none;
+    text-align: left;
+    margin: 1.5rem 0;
+    color: #dddddd;
+}
+
+.benefits li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.benefits li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-top: 1rem;
+}

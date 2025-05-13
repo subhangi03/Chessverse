@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessverse</title>
+    <link rel="icon" href="assets/styles/logo.jpg">
+    
+    <!-- Import Apricots font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Apricots&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --background: #1a1a2e;
+            --primary-color: #1a1a2e;
+            --secondary-color: #ffffff;
+            --button-hover: #491a05;
+            --text-color: #f5f5f5;
+            --card-background: rgba(251, 245, 245, 0.152);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--secondary-color);
+            background-color: var(--background);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+        }
+
+        /* Apply Apricots font to all main headings */
+        h1, h2, h3 {
+            font-family: 'Apricots', cursive;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            background-color: var(--button-hover);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--primary-color);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-align: center;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero .background-image {
+            background-image: url('assets/styles/logo2.png');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero .background-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        q {
+            font-size: 1.1em;
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="assets/styles/logo.jpg" alt="Chessverse Logo">
+        <h1>Chessverse</h1>
+        <nav>
+            <ul>
+                <li><button class="btn" onclick="location.href='loginindex.html'">LOG IN</button></li>
+                <li><button class="btn" onclick="location.href='signinindex.html'">SIGN UP</button></li>
+                <li><button class="btn" onclick="location.href='subscribe.html'">Subscribe</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Chessverse</h2>
+        <div class="background-image"></div>
+    </section>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h3>About Chessverse</h3>
+            <q>Chessverse is the ultimate destination for chess enthusiasts of all levels. Join us for weekly tournaments, chess lessons, and community events.</q>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h3>Upcoming Events</h3>
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>Weekly Blitz Tournament</h3>
+                    <p>Join our fast-paced blitz tournaments every Sunday at 3 PM.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Masterclass with Grandmasters</h3>
+                    <p>Learn from the best! Monthly sessions with renowned Grandmasters.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Beginner's Chess Lessons</h3>
+                    <p>New to chess? Start with our beginner-friendly chess lessons every Friday.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <q>Email: mastermaters@chessverse.com | Phone: +91-810-135-1485<br>
+            Follow us on social media: Facebook | Twitter | Instagram</q>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Chessverse. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
