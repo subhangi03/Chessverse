@@ -12,5 +12,5 @@ The primary goals of the software are:
   ## Project report
   The project report can be viewed [here]().
 
-  ## Streamlit website
+  ## Website Preview!
   ![](https://github.com/Tushar3497/Chessverse/blob/8e9e9a08ef7e4d6c893d104619862b3f550babf1/front%20page%20.jpg)
